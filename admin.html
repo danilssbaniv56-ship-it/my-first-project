@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель администратора | Корочки.есть</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="image05.jpg" alt="Логотип">
+            <span class="logo-text">Корочки.есть</span>
+        </div>
+        <div style="display:flex; gap:20px;"><span style="color:#2563eb; font-weight:600;">Управление обучением</span> | <a href="login.html" style="text-decoration:none;">Выйти</a></div>
+    </header>
+
+    <main class="container">
+        <section class="metrics-grid">
+            <div class="metric-card bg-blue" data-filter="all"><div><p class="metric-label">Всего заявок</p><p class="metric-value" id="count-all">0</p></div></div>
+            <div class="metric-card" data-filter="Новая"><div><p class="metric-label">Новая</p><p class="metric-value" id="count-new">0</p></div></div>
+            <div class="metric-card" data-filter="Идет обучение"><div><p class="metric-label">Идет обучение</p><p class="metric-value" id="count-process">0</p></div></div>
+            <div class="metric-card" data-filter="Обучение завершено"><div><p class="metric-label">Обучение завершено</p><p class="metric-value" id="count-done">0</p></div></div>
+        </section>
+
+        <section class="filters-bar"><div class="search-wrapper"><input type="text" id="table-search" placeholder="Поиск по ФИО или курсу"></div></section>
+
+        <section class="table-container">
+            <table class="admin-table" id="requests-table">
+                <thead><tr><th>Слушатель</th><th>Курс / Заявка</th><th>Дата</th><th>Оплата</th><th>Статус</th></tr></thead>
+                <tbody id="admin-tbody"></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
